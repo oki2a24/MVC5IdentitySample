@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
+using MVC5IdentitySample.Models;
+using System;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using MVC5IdentitySample.Models;
-using Microsoft.AspNet.Identity.Owin;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.Owin.Security;
 
 namespace MVC5IdentitySample.Controllers
 {
@@ -54,8 +51,6 @@ namespace MVC5IdentitySample.Controllers
                 _userManager = value;
             }
         }
-
-
 
         // GET: Users
         public ActionResult Index()
