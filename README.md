@@ -4,7 +4,7 @@ Identity をベースにした、ユーザー情報を DB に持つ独自の認�
 ## 始め方
 1. 本リモートリポジトリをクローンする。
 1. ビルドを実行する。
-1. Visual Studio パッケージマネージャーコンソールから、Update-Database -Verbose を実行する。
+1. Visual Studio パッケージマネージャーコンソールから、`Update-Database -Verbose` を実行する。
 1. デバッグなしで開始 (Ctrl + F5) して、アプリの動作を確認する。
 
 ## 仕様
