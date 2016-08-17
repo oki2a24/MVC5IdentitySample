@@ -138,7 +138,7 @@ namespace MVC5IdentitySample.Controllers
 
                 var userForCreate = new User
                 {
-                    Id = Guid.NewGuid().ToString(),
+                    Id = Guid.NewGuid().ToString("N"),
                     UserName = user.UserName,
                     Memo = user.Memo
                 };
