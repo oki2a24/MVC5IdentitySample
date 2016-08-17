@@ -1,0 +1,33 @@
+﻿@model MVC5IdentitySample.Models.User
+
+@{
+    ViewBag.Title = "ユーザ詳細";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("編集", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("一覧へ戻る", "Index")
+</p>

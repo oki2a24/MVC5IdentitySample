@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MVC5IdentitySample.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()

@@ -1,0 +1,40 @@
+﻿@model MVC5IdentitySample.Models.User
+
+@{
+    ViewBag.Title = "ユーザ削除";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>ユーザを削除してもよろしいですか？</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="削除" class="btn btn-default" /> |
+            @Html.ActionLink("一覧へ戻る", "Index")
+        </div>
+    }
+</div>
