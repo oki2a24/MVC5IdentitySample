@@ -166,6 +166,7 @@
       <DependentUpon>201608170748266_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EditUserViewModel.cs" />
     <Compile Include="Models\ChangePasswordViewModel.cs" />
     <Compile Include="Models\UserStore.cs" />
     <Compile Include="Controllers\HomeController.cs" />
