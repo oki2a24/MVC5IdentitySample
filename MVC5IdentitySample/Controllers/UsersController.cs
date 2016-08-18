@@ -167,16 +167,28 @@ namespace MVC5IdentitySample.Controllers
             {
                 return HttpNotFound();
             }
-            return View(user);
+            var model = new EditUserViewModel()
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                Memo = user.Memo
+            };
+            return View(model);
         }
 
         // POST: Users/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,UserName,Memo")] User user)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,UserName,Memo")] EditUserViewModel model)
         {
             if (ModelState.IsValid)
             {
+                var user = new User()
+                {
+                    Id = model.Id,
+                    UserName = model.UserName,
+                    Memo = model.Memo
+                };
                 var result = await UserManager.UpdateAsync(user);
                 if (result.Succeeded)
                 {
@@ -184,7 +196,7 @@ namespace MVC5IdentitySample.Controllers
                 }
                 AddErrors(result);
             }
-            return View(user);
+            return View(model);
         }
 
         [Authorize]

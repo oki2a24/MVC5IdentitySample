@@ -1,4 +1,4 @@
-﻿@model MVC5IdentitySample.Models.User
+﻿@model MVC5IdentitySample.Models.EditUserViewModel
 
 @{
     ViewBag.Title = "ユーザ編集";
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">パスワード</label>
             <div class="col-md-10">
                 <p class="form-control-static">@Html.ActionLink("パスワードの変更", "ChangePassword")</p>
             </div>
